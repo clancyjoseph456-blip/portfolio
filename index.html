@@ -3,48 +3,105 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ainerugaba Joseph Clancy - BSIT Student specializing in web and mobile app development.">
+    <title>Ainerugaba Joseph Clancy - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
+        <div class="header-container">
+            <div class="logo">AJC</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
         <h1>Ainerugaba Joseph Clancy</h1>
         <p>BSIT Student | Web & Mobile App Development</p>
-        <img src="C:\Users\LENOVO\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2026-02-07 at 12.24.04.jpeg"
-            width="100" alt="Profile Picture">
+        <img src="img/profile.jpg" width="100" height="100" alt="Profile Picture of Ainerugaba Joseph Clancy" class="profile-img">
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Bachelor of Science in Information Technology student with an
-            interest in web development, networking, and software systems.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
+    <nav id="navbar" class="navbar">
         <ul>
-            <li>LAN Design Assignment</li>
-            <li>FreshMart Database ER Diagram</li>
-            <li>computer and hardware assembling</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: +256 748 372 003</p>
-        <p>Email: clancyjoseph456@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/clancyjoseph456-blip" target="_blank">My GitHub</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ainerugaba-joseph-clancy-2aa3a8374/" target="_blank">My
-                LinkedIn</a></p>
-    </section>
+    <main>
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <p>
+                I am a Bachelor of Science in Information Technology student with an
+                interest in web development, networking, and software systems. I'm passionate about
+                creating innovative solutions and continuously learning new technologies.
+            </p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Database Design</span>
+                    <span class="skill-tag">Mobile Apps</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="0">
+                    <h3>LAN Design Assignment</h3>
+                    <p>A comprehensive local area network design project demonstrating network topology and connectivity.</p>
+                    <button class="view-btn">View Details</button>
+                </div>
+                <div class="project-card" data-project="1">
+                    <h3>FreshMart Database ER Diagram</h3>
+                    <p>Relational database design for an e-commerce platform with detailed entity-relationship diagrams.</p>
+                    <button class="view-btn">View Details</button>
+                </div>
+                <div class="project-card" data-project="2">
+                    <h3>Computer Hardware Assembling</h3>
+                    <p>Hands-on experience in building, troubleshooting, and optimizing computer systems.</p>
+                    <button class="view-btn">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> <a href="tel:+256748372003">+256 748 372 003</a></p>
+                <p><strong>Email:</strong> <a href="mailto:clancyjoseph456@gmail.com">clancyjoseph456@gmail.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/clancyjoseph456-blip" target="_blank" rel="noopener noreferrer" class="social-btn github">GitHub</a>
+                <a href="https://www.linkedin.com/in/ainerugaba-joseph-clancy-2aa3a8374/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">LinkedIn</a>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 My Portfolio</p>
+        <p>&copy; 2026 Ainerugaba Joseph Clancy. All rights reserved.</p>
     </footer>
+
+    <!-- Modal for project details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
